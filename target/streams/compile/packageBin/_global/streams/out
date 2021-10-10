@@ -1,0 +1,33 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/http4s-rho-trace-example_2.13-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$$typecreator1$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/Main$$typecreator1$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$$typecreator2$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/Main$$typecreator2$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MyRoutes$$typecreator1$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/MyRoutes$$typecreator1$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/com[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/http4s[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/com/http4s[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/http4s/rho[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/com/http4s/rho[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/http4s/rho/swagger[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/com/http4s/rho/swagger[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/http4s/rho/swagger/demo[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/com/http4s/rho/swagger/demo[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/http4s/rho/swagger/demo/NativeRoutes$$anonfun$routes$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/com/http4s/rho/swagger/demo/NativeRoutes$$anonfun$routes$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/http4s/rho/swagger/demo/NativeRoutes$dsl$1$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/com/http4s/rho/swagger/demo/NativeRoutes$dsl$1$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/http4s/rho/swagger/demo/NativeRoutes.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/com/http4s/rho/swagger/demo/NativeRoutes.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/http4s/rho/swagger/demo/NativeRoutes$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/com/http4s/rho/swagger/demo/NativeRoutes$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MyRoutes.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/raghvendrasingh/Desktop/OtherRepos/http4s-rho-trace-example/target/scala-2.13/classes/MyRoutes.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
