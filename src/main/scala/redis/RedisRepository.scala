@@ -18,34 +18,34 @@ class RedisRepository[F[_]: Async: Trace](redisConn: RedisCommands[F, String, St
     } yield BluepipeDate(effectiveDate, createdAt)
 
   private def convertValue[A, B](
-                                  key: String,
-                                  field: String,
-                                  convert: String => Either[A, B]
-                                ): EitherT[F, JobError, B] = {
+    key: String,
+    field: String,
+    convert: String => Either[A, B]
+  ): EitherT[F, JobError, B] = {
     import cats.implicits._
 
     EitherT(
       for {
         maybeValue <- redisConn.hGet(key, field)
         x           = maybeValue match {
-          case Some(value) =>
-            convert(value) match {
-              case Right(convertedValue) => Right(convertedValue)
-              case Left(error)           =>
-                Left(
-                  DecodeError(
-                    s"Unexpected Redis value $value for key $key and field $field: $error"
-                  )
-                )
-            }
-          case None        => Left(KeyNotFound(s"Redis key $key, field $field"))
-        }
+                        case Some(value) =>
+                          convert(value) match {
+                            case Right(convertedValue) => Right(convertedValue)
+                            case Left(error)           =>
+                              Left(
+                                DecodeError(
+                                  s"Unexpected Redis value $value for key $key and field $field: $error"
+                                )
+                              )
+                          }
+                        case None        => Left(KeyNotFound(s"Redis key $key, field $field"))
+                      }
       } yield x
     )
   }
 }
 
 object RedisRepository {
-  def apply[F[_]: Async](redisConn: RedisCommands[F, String, String]): RedisRepository[F] =
+  def apply[F[_]: Async: Trace](redisConn: RedisCommands[F, String, String]): RedisRepository[F] =
     new RedisRepository[F](redisConn)
 }

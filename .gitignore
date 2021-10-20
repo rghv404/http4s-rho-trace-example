@@ -1,7 +1,12 @@
 .DS_Store
 .bsp
+*.bloop*
+.vscode
+*.bsp
+*.metals
 .idea
 .metals
 build/
 out/
 target*
+.bloop/http4s-rho-trace-example-test.json

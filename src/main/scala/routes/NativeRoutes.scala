@@ -6,18 +6,21 @@ import natchez.Trace
 import org.http4s.HttpRoutes
 import org.http4s.dsl.Http4sDsl
 import cats.implicits._
-import org.typelevel.log4cats.Logger
+import org.typelevel.log4cats.{Logger, SelfAwareStructuredLogger}
+import org.typelevel.log4cats.slf4j.Slf4jLogger
 import redis.RedisModel.BluepipeDate
 import redis.{DecodeError, KeyNotFound, RedisRepository}
 
-class NativeRoutes[F[_]: Async: Trace: Logger] extends Http4sDsl[F] {
+class NativeRoutes[F[_]: Async: Trace] extends Http4sDsl[F] {
 
-  def greet[F[_]: Monad: Trace](input: String): F[String] =
-    Trace[F].span("greet") {
-      for {
-        _ <- Trace[F].put("input" -> input)
-      } yield s"Hello $input!\n"
-    }
+  implicit def slf4jLogger: SelfAwareStructuredLogger[F] = Slf4jLogger.getLogger[F]
+
+//  def greet[F[_]: Monad: Trace](input: String): F[String] =
+//    Trace[F].span("greet") {
+//      for {
+//        _ <- Trace[F].put("input" -> input)
+//      } yield s"Hello $input!\n"
+//    }
 
   def routes(redisRepo: RedisRepository[F]): HttpRoutes[F] =
     HttpRoutes.of[F] { case GET -> Root / "hello" / name =>
@@ -41,5 +44,5 @@ class NativeRoutes[F[_]: Async: Trace: Logger] extends Http4sDsl[F] {
 }
 
 object NativeRoutes {
-  def apply[F[_]: Async: Trace: Logger](redisRepository: RedisRepository[F]): HttpRoutes[F] = new NativeRoutes[F].routes(redisRepository)
+  def apply[F[_]: Async: Trace](redisRepository: RedisRepository[F]): HttpRoutes[F] = new NativeRoutes[F].routes(redisRepository)
 }

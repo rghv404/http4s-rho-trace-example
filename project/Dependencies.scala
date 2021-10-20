@@ -42,7 +42,12 @@ object Dependencies {
   lazy val circeExtraDeps  = Seq(circeGenericExtras, circeConfig)
   lazy val circeCommonDeps = Seq(circeCore, circeGeneric, circeLiteral, circeParser)
   lazy val http4sDeps      = Seq(http4sBlaze, http4sCore, http4sCirce, http4sDSL, http4sServer)
-  lazy val natchezDeps     = Seq("org.tpolecat" %% "natchez-http4s" % "0.1.3", "org.tpolecat" %% "natchez-jaeger" % "0.1.5", "org.tpolecat" %% "natchez-datadog" % "0.1.5")
+  lazy val natchezDeps     = Seq(
+    "org.tpolecat" %% "natchez-http4s" % "0.1.3",
+    "org.tpolecat" %% "natchez-noop" % "0.1.5",
+    "org.tpolecat" %% "natchez-jaeger" % "0.1.5",
+//    "org.tpolecat" %% "natchez-datadog" % "0.1.5"
+  )
   lazy val rhoDeps         = Seq(rhoCore, rhoSwagger, rhoSwaggerUI)
   lazy val logDeps         = Seq(log4catsCore, log4Cats)
   lazy val redis4CatsDeps  = Seq(redis4CatsEffects, redis4CatsLogger)
